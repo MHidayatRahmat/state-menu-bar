@@ -1,0 +1,175 @@
+{
+    "Data": [
+      {
+        "navId": "0",
+        "name": "System Level",
+        "access": "Admin",
+        "subItems": [
+          {
+            "id": 0,
+            "name": "Security Parameter"
+          },
+          {
+            "id": 1,
+            "name": "Task Profile"
+          },
+          {
+            "id": 2,
+            "name": "Security Question"
+          }
+        ]
+      },
+      {
+        "navId": "1",
+        "name": "Organisation Level",
+        "access": [{ "role": "Admin" }],
+        "subItems": [
+          {
+            "id": 0,
+            "name": "Organisation Profile"
+          },
+          {
+            "id": 1,
+            "name": "Application Profile"
+          },
+          {
+            "id": 2,
+            "name": "Application Administrator"
+          },
+          {
+            "id": 3,
+            "name": "User Profile"
+          },
+          {
+            "id": 4,
+            "name": "Privilege User"
+          },
+          {
+            "id": 5,
+            "name": "Reset Password"
+          },
+          {
+            "id": 6,
+            "name": "System Administrator"
+          },
+          {
+            "id": 7,
+            "name": "Clear Session"
+          },
+          {
+            "id": 8,
+            "name": "Recover Deleted User"
+          }
+        ]
+      },
+      {
+        "navId": "2",
+        "name": "Application Level",
+        "access": [{ "role": "Admin" }],
+        "subItems": [
+          {
+            "id": 0,
+            "name": "Application User"
+          },
+          {
+            "id": 1,
+            "name": "Unit Profile"
+          },
+          {
+            "id": 2,
+            "name": "Unit Administrator"
+          },
+          {
+            "id": 3,
+            "name": "Unit Task"
+          },
+          {
+            "id": 4,
+            "name": "User Profile"
+          },
+          {
+            "id": 5,
+            "name": "Reset Password"
+          },
+          {
+            "id": 6,
+            "name": "Clear Session"
+          },
+          {
+            "id": 7,
+            "name": "Recover Deleted User"
+          }
+        ]
+      },
+      {
+        "navId": "3",
+        "name": "Unit Level",
+        "access": [{ "role": "Admin" }, { "role": "User" }],
+        "subItems": [
+          {
+            "id": 0,
+            "name": "Unit Administrator"
+          },
+          {
+            "id": 1,
+            "name": "Unit User"
+          },
+          {
+            "id": 2,
+            "name": "Group Profile"
+          },
+          {
+            "id": 3,
+            "name": "Group Task"
+          },
+          {
+            "id": 4,
+            "name": "Group User"
+          },
+          {
+            "id": 5,
+            "name": "User Profile"
+          },
+          {
+            "id": 6,
+            "name": "Reset Password"
+          },
+          {
+            "id": 7,
+            "name": "Clear Session"
+          },
+          {
+            "id": 8,
+            "name": "Recover Deleted User"
+          },
+          {
+            "id": 9,
+            "name": "User Task Request"
+          }
+        ]
+      }
+    ],
+    "FooterData": [
+      {
+        "id": 1,
+        "name": "About"
+      },
+      {
+        "id": 2,
+        "name": "Report"
+      },
+      {
+        "id": 3,
+        "name": "License"
+      },
+      {
+        "id": 4,
+        "name": "Copyright"
+      },
+      {
+        "id": 5,
+        "name": "Details"
+      }
+    ]
+  }
+  
