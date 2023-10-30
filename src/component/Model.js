@@ -125,7 +125,7 @@ export const Popup = ({ selectedItem, onClose }) => {
         </motion.div>
       )}
       {addModalOpen && (
-        <ModalEdit onOpen={addModalOpen} location={selectedItem.id} />
+        <ModalEdit onOpen={addModalOpen} location={selectedItem.id} State={selectedItem.name}/>
       )}
     </AnimatePresence>
   );

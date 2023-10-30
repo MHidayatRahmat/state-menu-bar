@@ -10,6 +10,7 @@ import {
 } from "../Style/Animation";
 import images from "../images/malaysia.jpg";
 import KeyboardDoubleArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowLeftOutlined";
+import MapContainer from "./MapContainer";
 
 async function fetchDataFromFirebase(setTestData, setLoading) {
   try {
@@ -55,7 +56,7 @@ function StateMenu() {
       {loading && <p className="ml-10">Loading</p>}
       <div className="relative">
         <div
-          className="z-30 self-baseline bg-white"
+          className="fixed right-0 top-30 z-20 self-baseline bg-white"
           style={{ position: "absolute", right: 0 }}
         >
           <div
@@ -103,6 +104,9 @@ function StateMenu() {
               onClose={() => setModal(false)}
             />
           )}
+        </div>
+        <div className="ml-4">
+        <MapContainer/>
         </div>
         {/* <img src={images} className="w-screen"/> */}
       </div>

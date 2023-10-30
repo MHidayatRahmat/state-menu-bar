@@ -1,18 +1,31 @@
-import React, { Component } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import React from "react";
+import GoogleMapReact from 'google-map-react';
 
-class MapContainer extends Component {
-  render() {
-    return (
-      <Map
-        google={this.props.google}
-        zoom={14}
-        initialCenter={{ lat: 37.7749, lng: -122.4194 }} // Set your initial map center
-      />
-    );
-  }
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
+export default function MapContainer() {
+  const defaultProps = {
+    center: {
+      lat: 	3.1526588996672693, // Latitude for Malaysia
+      lng: 101.70222049999998, // Longitude for Malaysia
+    },
+    zoom: 11, // You can adjust the zoom level as needed
+  };
+
+  return (
+    // Important! Always set the container height explicitly
+    <div style={{ height: '100vh', width: '100%' }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: "AIzaSyAxXPmi2ob0fDL5kEZftv2gxwx7n9qKX30" }} // Replace with your API key
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+      >
+        <AnyReactComponent
+          lat={defaultProps.center.lat}
+          lng={defaultProps.center.lng}
+          text="Malaysia"
+        />
+      </GoogleMapReact>
+    </div>
+  );
 }
-
-export default GoogleApiWrapper({
-  apiKey: 'YOUR_API_KEY' // Replace with your actual API key
-})(MapContainer);
