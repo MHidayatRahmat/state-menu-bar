@@ -42,7 +42,7 @@ function Header(props) {
           <p>last seen: today: 12:00 by Hidayat Rahmat (Author)</p> </div> */}
           </div>
       <div className="flex items-center justify-end flex-1 mr-10">
-        <SearchOutlinedIcon className="inline font-bold bg-white text-blue-500 rounded-l-md border-black shadow-md z-20" style={{fontSize: "30px", borderRadius: "5px"}} />
+        <SearchOutlinedIcon className="inline font-bold bg-white text-blue-500 rounded-l-md border-black shadow-md shadow-black w-1/10 h-1/2 " style={{fontSize: "30px"}} />
         <input
           className="flex justify-center p-2 mt-2 border-black rounded-r-md shadow-md shadow-black w-1/10 h-1/2 mb-2 mr-2"
           placeholder="Search..."

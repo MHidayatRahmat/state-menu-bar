@@ -1,0 +1,294 @@
+{
+  "location": [{
+    "id": "0",
+    "name": "Johor",
+    "Latitude":"2.0229011997842714",
+    "Longitude":"103.31477209999998",
+    "state": [
+      "Johor Bahru",
+      "Tebrau",
+      "Pasir Gudang",
+      "Bukit Indah",
+      "Skudai",
+      "Kluang",
+      "Batu Pahat",
+      "Muar",
+      "Ulu Tiram",
+      "Senai",
+      "Segamat",
+      "Kulai",
+      "Kota Tinggi",
+      "Pontian Kechil",
+      "Tangkak",
+      "Bukit Bakri",
+      "Yong Peng",
+      "Pekan Nenas",
+      "Labis",
+      "Mersing",
+      "Simpang Renggam",
+      "Parit Raja",
+      "Kelapa Sawit",
+      "Buloh Kasap",
+      "Chaah"
+    ]
+  }
+  ,{
+    "id": "1",
+    "name": "Kedah",
+    "Latitude":"5.809826499454991",
+    "Longitude":"100.67150349999999",
+    "state": [
+      "Sungai Petani",
+      "Alor Setar",
+      "Kulim",
+      "Jitra / Kubang Pasu",
+      "Baling",
+      "Pendang",
+      "Langkawi",
+      "Yan",
+      "Sik",
+      "Kuala Nerang",
+      "Pokok Sena",
+      "Bandar Baharu"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Kelantan",
+    "Latitude":"5.402130199479372",
+    "Longitude":"102.06359719999999",
+    "state": [
+      "Kota Bharu",
+      "Pangkal Kalong",
+      "Tanah Merah",
+      "Peringat",
+      "Wakaf Baru",
+      "Kadok",
+      "Pasir Mas",
+      "Gua Musang",
+      "Kuala Krai",
+      "Tumpat"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Melaka",
+    "Latitude":"2.3293743997517216",
+    "Longitude":"102.28809619999998",
+    "state": [
+      "Bandaraya Melaka",
+      "Bukit Baru",
+      "Ayer Keroh",
+      "Klebang",
+      "Masjid Tanah",
+      "Sungai Udang",
+      "Batu Berendam",
+      "Alor Gajah",
+      "Bukit Rambai",
+      "Ayer Molek",
+      "Bemban",
+      "Kuala Sungai Baru",
+      "Pulau Sebang",
+      "Jasin"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Negeri Sembilan",
+    "Latitude":"2.783189499704513",
+    "Longitude":"102.1925319",
+    "state": [
+      "Seremban",
+      "Port Dickson",
+      "Nilai",
+      "Bahau",
+      "Tampin",
+      "Kuala Pilah"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Pahang",
+    "Latitude":"3.616882199622448",
+    "Longitude":"102.5994547",
+    "state": [
+      "Kuantan",
+      "Temerloh",
+      "Bentong",
+      "Mentakab",
+      "Raub",
+      "Jerantut",
+      "Pekan",
+      "Kuala Lipis",
+      "Bandar Jengka",
+      "Bukit Tinggi"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Perak",
+    "Latitude":"4.812180999520596",
+    "Longitude":"100.9797908",
+    "state": [
+      "Ipoh",
+      "Taiping",
+      "Sitiawan",
+      "Simpang Empat",
+      "Teluk Intan",
+      "Batu Gajah",
+      "Lumut",
+      "Kampung Koh",
+      "Kuala Kangsar",
+      "Sungai Siput Utara",
+      "Tapah",
+      "Bidor",
+      "Parit Buntar",
+      "Ayer Tawar",
+      "Bagan Serai",
+      "Tanjung Malim",
+      "Lawan Kuda Baharu",
+      "Pantai Remis",
+      "Kampar"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Perlis",
+    "Latitude":"6.486839199422616",
+    "Longitude":"100.2577623",
+    "state": [
+      "Kangar",
+      "Kuala Perlis"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Pulau Pinang",
+    "Latitude":"5.406501299479094",
+    "Longitude":"100.25590769999998",
+    "state": [
+      "Bukit Mertajam",
+      "Georgetown",
+      "Sungai Ara",
+      "Gelugor",
+      "Ayer Itam",
+      "Butterworth",
+      "Perai",
+      "Nibong Tebal",
+      "Permatang Kucing",
+      "Tanjung Tokong",
+      "Kepala Batas",
+      "Tanjung Bungah",
+      "Juru"
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Sabah",
+    "Latitude":"5.425735899477868",
+    "Longitude":"117.03263919999999",
+    "state": [
+      "Kota Kinabalu",
+      "Sandakan",
+      "Tawau",
+      "Lahad Datu",
+      "Keningau",
+      "Putatan",
+      "Donggongon",
+      "Semporna",
+      "Kudat",
+      "Kunak",
+      "Papar",
+      "Ranau",
+      "Beaufort",
+      "Kinarut",
+      "Kota Belud"
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Sarawak",
+    "Latitude":"2.5023854997335633",
+    "Longitude":"112.9547283",
+    "state": [
+      "Kuching",
+      "Miri",
+      "Sibu",
+      "Bintulu",
+      "Limbang",
+      "Sarikei",
+      "Sri Aman",
+      "Kapit",
+      "Batu Delapan Bazaar",
+      "Kota Samarahan"
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Selangor",
+    "Latitude":"3.208330399661769",
+    "Longitude":"101.30414599999999",
+    "state": [
+      "Subang Jaya",
+      "Klang",
+      "Ampang Jaya",
+      "Shah Alam",
+      "Petaling Jaya",
+      "Cheras",
+      "Kajang",
+      "Selayang Baru",
+      "Rawang",
+      "Taman Greenwood",
+      "Semenyih",
+      "Banting",
+      "Balakong",
+      "Gombak Setia",
+      "Kuala Selangor",
+      "Serendah",
+      "Bukit Beruntung",
+      "Pengkalan Kundang",
+      "Jenjarom",
+      "Sungai Besar",
+      "Batu Arang",
+      "Tanjung Sepat",
+      "Kuang",
+      "Kuala Kubu Baharu",
+      "Batang Berjuntai",
+      "Bandar Baru Salak Tinggi",
+      "Sekinchan",
+      "Sabak",
+      "Tanjung Karang",
+      "Beranang",
+      "Sungai Pelek",
+      "Sepang"
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Terengganu",
+    "Latitude":"4.863074299516779",
+    "Longitude":"102.9949297",
+    "state": [
+      "Kuala Terengganu",
+      "Chukai",
+      "Dungun",
+      "Kerteh",
+      "Kuala Berang",
+      "Marang",
+      "Paka",
+      "Jerteh"
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Wilayah Persekutuan",
+    "Latitude":"3.1526588996672693",
+    "Longitude":"101.70222049999998",
+    "state": [
+      "Kuala Lumpur",
+      "Labuan",
+      "Putrajaya"
+    ]
+  }
+]
+}

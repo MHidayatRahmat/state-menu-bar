@@ -16,7 +16,7 @@ function PagesTemplate(props) {
   };
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-full">
       <Header clickDropDown={isHandleDropDown} isDropDownClick={isDropDownClick} />
       <div className="flex flex-1">
         <motion.div
