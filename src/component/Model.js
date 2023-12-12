@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
+import DeleteIcon from "@mui/icons-material/Delete";
 import { useState, useEffect } from "react";
 import ModalEdit from "./ModelEdit";
 import axios from "axios";
@@ -12,6 +13,7 @@ export const Popup = ({ selectedItem, onClose }) => {
   const [inputState, setInputState] = useState("");
   const [filteredData, setFilteredData] = useState(selectedItem.state.sort());
   const [addModalOpen, setAddModalOpen] = useState(false);
+  const [ModalEditOpen, setModalEditOpen] = useState(false);
   const [onAnimation, setOnAnimation] = useState(false);
 
   function handleSearch(text) {
@@ -23,13 +25,12 @@ export const Popup = ({ selectedItem, onClose }) => {
     const filtered = selectedItem.state.filter((stateItem) =>
       stateItem.toLowerCase().includes(text.toLowerCase())
     );
-  
+
     // Sort the filtered data before setting it
     filtered.sort();
-  
+
     setFilteredData(filtered);
   }
-  
 
   function handleAdd() {
     setAddModalOpen(!addModalOpen);
@@ -55,11 +56,32 @@ export const Popup = ({ selectedItem, onClose }) => {
         .then((response) => {
           console.log(response);
           alert("data deleted");
+          window.location.reload();
         })
         .catch((err) => {
           console.log(err);
         });
     }
+  }
+
+  function handleDoubleClick(id) {
+
+    setModalEditOpen(!ModalEditOpen);
+    // if (confirmed) {
+    //   console.log(id);
+    //   axios
+    //     .delete(
+    //       `https://react-malaysia-state-default-rtdb.firebaseio.com/location/${selectedItem.id}/state/${id}.json`
+    //     )
+    //     .then((response) => {
+    //       console.log(response);
+    //       alert("data deleted");
+    //       window.location.reload();
+    //     })
+    //     .catch((err) => {
+    //       console.log(err);
+    //     });
+    // }
   }
 
   return (
@@ -76,7 +98,7 @@ export const Popup = ({ selectedItem, onClose }) => {
           className="fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center z-50"
           style={{ background: "rgba(0,0,0,0.7)" }}
         >
-          <div className="bg-white w-1/4 h-1/2 overflow-y-auto">
+          <div className="bg-white w-1/4 h-1/2 overflow-y-auto rounded-t-lg">
             <motion.div
               key={selectedItem.id}
               sx={{ display: "flex", alignItems: "inline" }}
@@ -85,6 +107,8 @@ export const Popup = ({ selectedItem, onClose }) => {
                 <header className="flex justify-center text-2xl font-bold mt-2 text-sky-700">
                   {selectedItem.name}
                 </header>
+                <p className="text-sky-700 text-xs flex justify-center">Latitude: <p className="inline text-black ml-2">{selectedItem.Latitude}</p></p>
+                <p className="text-sky-700 text-xs flex justify-center">Latitude: <p className="inline text-black ml-2">{selectedItem.Longitude}</p></p>
                 <input
                   className="ml-6 p-2 mt-2 border rounded-lg w-5/6 shadow-md"
                   placeholder="Search..."
@@ -98,12 +122,17 @@ export const Popup = ({ selectedItem, onClose }) => {
               )}
               {filteredData.map((stateItem, index) => (
                 <div
-                  className="flex ml-4 p-1 hover:bg-sky-700 hover:text-white border-b-2"
+                  className="flex justify-between ml-4 p-1 bg-slate-50 hover:bg-sky-700 hover:text-white border-b-2 rounded-md"
                   key={index}
-                  onClick={() => handleDelete(index)}
+                  onDoubleClick={() => handleDoubleClick(index)}
                 >
-                  <ArrowRightOutlinedIcon className="inline mr-2" />
-                  {stateItem}
+                  <div className="flex items-center">
+                    <ArrowRightOutlinedIcon className="inline mr-2" />
+                    {stateItem}
+                  </div>
+                  <button onClick={() => handleDelete(index)} className="hover:text-red-900 rounded-lg inline text-red-500 hover:text-lg text-sm">
+                    <DeleteIcon />
+                  </button>
                 </div>
               ))}
             </motion.div>
@@ -125,7 +154,11 @@ export const Popup = ({ selectedItem, onClose }) => {
         </motion.div>
       )}
       {addModalOpen && (
-        <ModalEdit onOpen={addModalOpen} location={selectedItem.id} State={selectedItem.name}/>
+        <ModalEdit
+          onOpen={addModalOpen}
+          location={selectedItem.id}
+          State={selectedItem.name}
+        />
       )}
     </AnimatePresence>
   );

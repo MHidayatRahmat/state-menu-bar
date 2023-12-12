@@ -18,15 +18,14 @@ function ModalEdit({ onOpen, location, State  }) {
       setNewCity(text);
     }
   }
-
   function handleSubmitData(event) {
     event.preventDefault();
-
+  
     if (newCity.trim() === "") {
       alert("City name cannot be empty");
       return;
     }
-
+  
     axios
       .get(
         `https://react-malaysia-state-default-rtdb.firebaseio.com/location/${location}/state.json`
@@ -35,7 +34,7 @@ function ModalEdit({ onOpen, location, State  }) {
         if (response.data) {
           const existingCities = response.data;
           existingCities.push(newCity);
-
+  
           axios
             .put(
               `https://react-malaysia-state-default-rtdb.firebaseio.com/location/${location}/state.json`,
@@ -44,6 +43,7 @@ function ModalEdit({ onOpen, location, State  }) {
             .then((response) => {
               alert("Data uploaded successfully");
               setIsOpen(!isOpen);
+              window.location.reload(); // Reload the page
             })
             .catch((err) => {
               console.error("Error updating data:", err);
@@ -54,6 +54,7 @@ function ModalEdit({ onOpen, location, State  }) {
         console.error("Error fetching existing data:", err);
       });
   }
+  
 
   return (
     <>
