@@ -41,6 +41,7 @@ function StateMenu() {
   
 
   const handleAccordionClick = (item) => {
+
     setActiveNavId(item.id);
     setModal(!modal);
     setSelectedItem(item);
@@ -106,7 +107,7 @@ function StateMenu() {
           )}
         </div>
         <div className="ml-4">
-        <MapContainer/>
+        <MapContainer item={selectedItem}/>
         </div>
         {/* <img src={images} className="w-screen"/> */}
       </div>

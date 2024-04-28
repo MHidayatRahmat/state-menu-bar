@@ -38,7 +38,6 @@ export const Popup = ({ selectedItem, onClose }) => {
 
   function handleClose() {
     setOnAnimation(!onAnimation);
-    console.log(onAnimation);
     onClose();
   }
 
@@ -48,18 +47,15 @@ export const Popup = ({ selectedItem, onClose }) => {
     );
 
     if (confirmed) {
-      console.log(id);
       axios
         .delete(
           `https://react-malaysia-state-default-rtdb.firebaseio.com/location/${selectedItem.id}/state/${id}.json`
         )
         .then((response) => {
-          console.log(response);
           alert("data deleted");
           window.location.reload();
         })
         .catch((err) => {
-          console.log(err);
         });
     }
   }

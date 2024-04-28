@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
+import FmdGoodIcon from '@mui/icons-material/FmdGood';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const AnyReactComponent = () => <div className="text-red-500 text-xl"><FmdGoodIcon/></div>;
 
-async function fetchDataFromFirebase(setTestData, setLoading) {
+async function fetchDataFromFirebase(setTestData, setLoading,item) {
   try {
     setLoading(true);
     const response = await axios.get(
-      "https://react-malaysia-state-default-rtdb.firebaseio.com/location.json"
+      `https://react-malaysia-state-default-rtdb.firebaseio.com/location/${item.id}.json`
     );
     const data = response.data;
     setTestData(data);
@@ -18,18 +19,19 @@ async function fetchDataFromFirebase(setTestData, setLoading) {
   }
 }
 
-export default function MapContainer() {
+export default function MapContainer({item}) {
   const [testData, setTestData] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetchDataFromFirebase(setTestData, setLoading);
+    fetchDataFromFirebase(setTestData, setLoading, item );
   }, []);
 
   const defaultCenter = {
-    lat: testData.length > 0 ? testData[1].Latitude : 3.1526588996672693,
-    lng: testData.length > 0 ? testData[1].Longitude : 101.70222049999998,
+    lat: testData.length > 0 ? testData.Latitude : 3.1526588996672693,
+    lng: testData.length > 0 ? testData.Longitude : 101.70222049999998,
   };
+
 
   const defaultProps = {
     center: defaultCenter,
